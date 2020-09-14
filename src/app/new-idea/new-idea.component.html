@@ -1,0 +1,100 @@
+<div class="example-container">
+  <form [formGroup]="bussinessform" (ngSubmit)="onSubmit()">  
+<div>
+    <h2>New Idea</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Project Theme</mat-label>
+      <input matInput placeholder="Project Theme Name" formControlName="pname" >
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Roots</mat-label>
+      <mat-select placeholder="Bussiness Plan" formControlName="roots" >
+        <mat-option value="Bussiness Plan">Bussiness Plan</mat-option>
+      </mat-select>
+    </mat-form-field>
+       &nbsp;&nbsp;
+
+    <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select placeholder="TDR" formControlName="type">
+          <mat-option value="TDR">TDR</mat-option>
+          <mat-option value="FRP">FRP</mat-option>
+          <mat-option value="Six Sigma">Six Sigma</mat-option>
+        </mat-select>
+      </mat-form-field>
+       &nbsp;&nbsp;
+
+      <mat-form-field appearance="fill">
+        <mat-label>Division</mat-label>
+        <mat-select placeholder="platform" formControlName="division" >
+          <mat-option value="platform">platform</mat-option>
+          <mat-option value="Air Conditioner">Air Conditioner</mat-option>
+          <mat-option value="Refrigerator">Refrigerator</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select placeholder="Quality A" formControlName="category" >
+          <mat-option value="Quality A">Quality A</mat-option>
+          <mat-option value="Quality B">Quality B</mat-option>
+          <mat-option value="Quality C">Quality C</mat-option>
+          <mat-option value="Quality D">Quality D </mat-option>
+        </mat-select>
+      </mat-form-field>
+   &nbsp;&nbsp;
+
+      <mat-form-field appearance="fill">
+          <mat-label>4M</mat-label>
+          <mat-select placeholder="Man" formControlName="four" >
+            <mat-option value="Man">Man</mat-option>
+            <mat-option value="Women">Women</mat-option>
+          </mat-select>
+        </mat-form-field>
+     &nbsp;&nbsp;
+
+        <mat-form-field appearance="fill">
+          <mat-label>Department</mat-label>
+          <mat-select placeholder="strategy" formControlName="department" >
+            <mat-option value="strategy">strategy</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <br>
+
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input  [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="Start date " >
+          <input matEndDate formControlName="end" placeholder="End date" >
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      
+        <mat-error *ngIf="bussinessform.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+        <mat-error *ngIf="bussinessform.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+      </mat-form-field>
+
+      &nbsp;&nbsp;
+
+      <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <mat-select placeholder="pune" formControlName="location" >
+          <mat-option value="Pune">Pune</mat-option>
+          <mat-option value="Mumbai">Mumbai</mat-option>
+          <mat-option value="Nashik">Nashik</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <br>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Project Need(optional)</mat-label>
+      <input matInput placeholder="None" formControlName="projectNeed" >
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
+</form>
+</div>

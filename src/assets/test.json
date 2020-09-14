@@ -1,0 +1,13 @@
+[
+    {   "id":101,
+      "email":"pooja@gmail.com",
+      "first_name":"pooja",
+      "last_name":"kolape"
+      
+  },
+  {   "id":102,
+    "email":"amruta@gmail.com",
+    "first_name":"amruta",
+    "last_name":"ekbote"
+  }
+  ]
